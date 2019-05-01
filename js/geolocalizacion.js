@@ -41,8 +41,8 @@ $(document).ready(function() {
   function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setPosition(pos);
     infoWindow.setContent(browserHasGeolocation ?
-      'Error: El servicio de geolocalizacion fallo.' :
-      'Error: Tu navegador no soporta la geolocalizacion.');
+      'Error: El servicio de geolocalización falló.' :
+      'Error: Tu navegador no soporta la geolocalización.');
       infoWindow.open(map);
     }
 

@@ -129,6 +129,36 @@ html {
   height: 650px;
 }
 
+.upvideo {
+  margin-top: 0%;
+}
+.labelvideo {
+  margin-top: 3%;
+}
+.enviarreporte {
+  margin-top: 3%;
+  background-color: #6D7B7B;
+  color: white;
+  font-weight: bolder;
+}
+.cancelarreporte {
+  margin-top: 3%;
+  background-color: #8C9898;
+  color: white;
+  font-weight: bolder;
+}
+.cancelarconf {
+  background-color: #8C9898;
+}
+.confcancel {
+  background-color: #6D7B7B;
+}
+.cancelarconf, .confcancel {
+  margin-top: 3%;
+  color: white;
+  font-weight: bolder;
+}
+
 /* ==========================================================================================================
 										ADVANTAGES
    ========================================================================================================== */
