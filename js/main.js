@@ -54,5 +54,9 @@
 		owlCarousel();
 	});
 
+    //$("div#modalMensaje").removeAttr('id');
 
+    $(".confcancel").on("click", function() {
+        $(".validate").val("");
+    });
 }());

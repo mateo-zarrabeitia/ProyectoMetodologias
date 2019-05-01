@@ -109,28 +109,26 @@
 
 								 <i class="fas fa-map-marker-alt prefix grey-text"></i>
 								 <label data-error="wrong" data-success="right" for="form29">Direccion</label>
-								  <input type="email" id="form29" class="form-control validate" required>
+								  <input type="text" id="form29" class="form-control validate" required>
 								 </div>
-							 </form>
 
 							<hr align="center" size="100" width="87%" margin-left="80%" />
 							 <div class="modal-body mx-3">
 					 	   <p class="lead">Datos de la Denuncia</p>
 					 	  </div>
 					 	  <div class="modal-body mx-3">
-					 	  	<form>
 						 	  	 <i class="fas fa-car prefix grey-text"></i>
 								<label data-error="wrong" data-success="right" for="form34" maxlength="7" required>Patente del Vehiculo</label>
-							 	<input type="text" id="form34" class="form-control validate required">
+							 	<input type="text" id="form34" class="form-control validate" required>
 
 								 <i class="fas fa-calendar-alt prefix grey-text"></i>
 								<label data-error="wrong" data-success="right" for="form34">Fecha</label>
-							 	<input type="date" id="form34" class="form-control validate" required required>
+							 	<input type="date" id="form34" class="form-control validate" required>
 
 
 								 <i class="fas fa-clock prefix grey-text"></i>
 								 <label data-error="wrong" data-success="right" for="form34">Hora</label>
-							 	<input type="time" id="form34" class="form-control validate" required required>
+							 	<input type="time" id="form34" class="form-control validate" required>
 
 								<!-- DIV PARA EL IFRAME DE GEOLOCALIZACION  DE GOOGLE -->
 								<div id="mapa"  style="width: 100%; height: 200px; margin-top: 10px"></div>
@@ -141,9 +139,9 @@
 									<i class="fas fa-arrow-circle-up prefix grey-text"></i>
 									<label data-error="wrong" data-success="right" for="upvideo">Subir video</label>
 								</div>
-								<input type="file" accept="video/*" class="form-control validate upvideo" name="" required>
-								<input type="button" class="form-control validate cancelarreporte" value="Cancelar reporte" name="" data-toggle="modal" data-target="#modalMensajeConfCancel">
-								<input type="submit" class="form-control validate enviarreporte" value="Enviar reporte" name="" data-toggle="modal" data-target="#modalMensaje">
+								<input type="file" accept="video/*" class="form-control upvideo" name="" required>
+								<input type="button" class="form-control cancelarreporte" value="Cancelar reporte" name="" data-toggle="modal" data-target="#modalMensajeConfCancel">
+								<input type="submit" class="form-control enviarreporte" value="Enviar reporte" name="" data-toggle="modal" data-target="#modalMensaje">
 							</form>
 					 </div>
 
@@ -156,7 +154,7 @@
 							 															POP UP (MENSAJE DENUNCIA GENERADA)
 						========================================================================================================== -->
 
-			 <div class="modal fade" id="modalMensaje" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+			 <div class="modal fade modmsj" id="modalMensaje" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
 			 aria-hidden="true">
 			 <div class="modal-dialog" role="document">
 				 <div class="modal-content">
@@ -172,12 +170,33 @@
 							 <label data-error="wrong" data-success="right" for="form8">Su denuncia ha sido enviado exitosamente. Gracias por colaborar!</label>
 						 </div>
 					 </div>
-					 <div class="modal-footer d-flex justify-content-center">
-						<button class="btn btn-unique2" data-dismiss="modal" >Cerrar<i class="fas fa-paper-plane-o ml-1"></i></button>
-					</div>
 				 </div>
 			 </div>
 		 </div>
+
+		<!-- ==========================================================================================================
+							 															POP UP (CONFIRMAR CANCELACIÓN)
+						========================================================================================================== -->
+
+			 <div class="modal fade" id="modalMensajeConfCancel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+			 aria-hidden="true">
+			 <div class="modal-dialog" role="document">
+				 <div class="modal-content">
+					 <div class="modal-header text-center">
+						 <h4 class="modal-title w-100 font-weight-bold">¿Confirmar cancelación?</h4>
+						 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							 <span aria-hidden="true">&times;</span>
+						 </button>
+					 </div>
+					 <div class="modal-body mx-3">			
+						 	<input type="button" class="form-control confcancel" value="Confirmar" data-dismiss="modal" aria-label="Close">
+							<input type="button" class="form-control cancelarconf" value="No" data-dismiss="modal" aria-label="Close">
+					 </div>
+				 </div>
+			 </div>
+		 </div>
+
+
 	</div> <!-- first section wrapper -->
 
 	<footer class="footer-outer">
