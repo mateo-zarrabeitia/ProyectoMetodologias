@@ -72,7 +72,46 @@
 		<!-- ==========================================================================================================
 																   IFRAME GOOGLE MAPS
 					 ========================================================================================================== -->
-				<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d25382.58977624712!2d-59.12654744135478!3d-37.32300305515352!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1556158604704!5m2!1ses-419!2sar" width="100%" height="90%" frameborder="0" style="border:0"></iframe>
+				<div class="bd-example">
+			  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+			    <ol class="carousel-indicators">
+			      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+			      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+			      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+			    </ol>
+			    <div class="carousel-inner">
+			      <div class="carousel-item active">
+			        <img src="img/contenedores-reciclaje.jpg" class="d-block w-100" alt="..."  height="600">
+			        <div class="carousel-caption d-none d-md-block">
+			          <h1> CUIDEMOS EL MEDIO AMBIENTE</h1>
+			          <p>SI VOS HACÉS TU PARTE, ENTRE TODOS PODEMOS</p>
+			        </div>
+			      </div>
+			      <div class="carousel-item">
+			        <img src="img/arrojobasura.jpg" class="d-block w-100" alt="..." height="600">
+			        <div class="carousel-caption d-none d-md-block">
+			          <h1>DENUNCIA</h1>
+			          <p>AYUDANOS A UN TANDIL MAS LIMPIO</p>
+			        </div>
+			      </div>
+			      <div class="carousel-item">
+			        <img src="img/medioambiente.jpg" class="d-block w-100" alt="..." height="600">
+			         <div class="carousel-caption d-none d-md-block">
+			          <h1>CONSTRUYENDO JUNTOS</h1>
+			          <p>UN TANDIL VERDE Y SALUDABLE</p>
+			        </div>
+			      </div>
+			    </div>
+			    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+			      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			      <span class="sr-only">Previous</span>
+			    </a>
+			    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+			      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			      <span class="sr-only">Next</span>
+			    </a>
+			  </div>
+			</div>
 
 		<!-- ==========================================================================================================
 																			FORM POP UP (GENERAR DENUNCIA)
