@@ -1,8 +1,33 @@
+<?php
+/* Smarty version 3.1.30, created on 2019-05-08 20:47:55
+  from "C:\xampp\htdocs\Scrum-03-Tudai-2019\templates\index.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_5cd3245b0a1a83_45630122',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '63d0a2d0977cb7360b3758f6bb140ab70b2924b1' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\Scrum-03-Tudai-2019\\templates\\index.tpl',
+      1 => 1557323214,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5cd3245b0a1a83_45630122 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Trash</title>
+	<title><?php echo $_smarty_tpl->tpl_vars['titulo']->value;?>
+</title>
 	<link rel="icon" href="favicon.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
@@ -33,9 +58,11 @@
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
 	<!-- Script para usar la api de Google Maps  -->
-	<script async defer
+	<?php echo '<script'; ?>
+ async defer
 	    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtg4aOaTtIbJ3bkYGoPENDgguwcGBbFNI&sensor=false">
-	</script>
+	<?php echo '</script'; ?>
+>
 </head>
 <body>
 
@@ -234,11 +261,25 @@
 
 </div> <!-- main page wrapper -->
 
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.js"></script>
-	<script src="js/owl.carousel.js"></script>
-	<script src="js/wow.min.js"></script>
-	<script src="js/main.js"></script>
-	<script src="js/geolocalizacion.js"></script>
+	<?php echo '<script'; ?>
+ src="js/jquery.min.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ src="js/bootstrap.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ src="js/owl.carousel.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ src="js/wow.min.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ src="js/main.js"><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ src="js/geolocalizacion.js"><?php echo '</script'; ?>
+>
 </body>
 </html>
+<?php }
+}

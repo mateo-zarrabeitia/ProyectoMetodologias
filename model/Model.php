@@ -6,11 +6,11 @@
         {
             try
             {
-                $this->db = new PDO('mysql:host=localhost;'.'dbname=db_celulares;charset=utf8', 'root', '');
+                $this->db = new PDO('mysql:host=localhost;'.'dbname=apptrash;charset=utf8', 'root', '');
             }
             catch (PDOException $e)
             {
-                buildDDBBfromFile(//'NOMBREBD', 'database/NOMBREARCHIVO.sql'); //Completar con los datos de la BD (primer parámetro nombre de la BD, segundo parámetro nombre del archivo .sql de la bd)
+                buildDDBBfromFile('apptrash', 'database/apptrash.sql');
             } 
         }
     }

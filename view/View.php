@@ -3,10 +3,11 @@
 	class View
 	{
 		protected $smarty;
+
 		function __construct()
 		{
 			$this->smarty = new Smarty();
-			$this->smarty->assign('titulo', 'Trash');
+			$this->smarty->assign('titulo', 'Trash app');
 		}
 	}
  ?>
