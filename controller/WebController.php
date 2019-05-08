@@ -14,5 +14,10 @@
 	  		$titulo = 'AppTrash';
 	  		$this->view->showIndex($titulo);
 	  	}
+
+	  	public function admin()
+	  	{
+	  		$this->view->showAdminIndex();
+	  	}
 	}
  ?>

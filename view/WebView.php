@@ -8,5 +8,9 @@
 			$this->smarty->display('templates/index.tpl');
 		}
 
+		function showAdminIndex() {
+			$this->smarty->display('templates/admin.tpl');
+		}
+
 	}
  ?>

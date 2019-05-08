@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2019-05-08 21:59:25
+/* Smarty version 3.1.30, created on 2019-05-08 22:47:40
   from "C:\xampp\htdocs\Scrum-03-Tudai-2019\templates\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5cd3351dafdcb9_07124720',
+  'unifunc' => 'content_5cd3406c2500c0_69696629',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '63d0a2d0977cb7360b3758f6bb140ab70b2924b1' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Scrum-03-Tudai-2019\\templates\\index.tpl',
-      1 => 1557345537,
+      1 => 1557348409,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cd3351dafdcb9_07124720 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cd3406c2500c0_69696629 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -91,6 +91,9 @@ function content_5cd3351dafdcb9_07124720 (Smarty_Internal_Template $_smarty_tpl)
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#">Mis Reportes</a>
+					</li>
+					<li>
+						<button class="btn"><a href="admin">Soy admin</a></button>
 					</li>
 				</ul>
 			</div>

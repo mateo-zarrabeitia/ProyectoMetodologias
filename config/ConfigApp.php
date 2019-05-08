@@ -6,7 +6,8 @@
     	public static $ACTIONS = 
       [
         '' => 'WebController#index',
-        'index' => 'WebController#index'
+        'index' => 'WebController#index',
+        'admin' => 'WebController#admin'
       ];
 	}
 ?>

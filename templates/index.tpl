@@ -65,6 +65,9 @@
 					<li class="nav-item">
 						<a class="nav-link" href="#">Mis Reportes</a>
 					</li>
+					<li>
+						<button class="btn"><a href="admin">Soy admin</a></button>
+					</li>
 				</ul>
 			</div>
 		</nav>
