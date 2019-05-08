@@ -11,7 +11,7 @@
             catch (PDOException $e)
             {
                 buildDDBBfromFile('apptrash', 'database/apptrash.sql');
-            } 
+            }
         }
     }
 
@@ -26,7 +26,7 @@
          	$connection->exec('USE '. $dbname);
          	$queries = loadSQLSchema($dbfile);
          	$connection->exec($queries);
-		} 
+		}
 		catch (PDOException $e)
         {
      		echo $e;
