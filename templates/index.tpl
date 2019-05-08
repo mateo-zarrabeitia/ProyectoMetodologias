@@ -81,21 +81,21 @@
 			    </ol>
 			    <div class="carousel-inner">
 			      <div class="carousel-item active">
-			        <img src="img/contenedores-reciclaje.jpg" class="d-block w-100" alt="..."  height="600">
+			        <img src="img/contenedores-reciclaje.jpg" class="d-block w-100" alt="..."  >
 			        <div class="carousel-caption d-none d-md-block">
 			          <h1> CUIDEMOS EL MEDIO AMBIENTE</h1>
 			          <p>SI VOS HACÉS TU PARTE, ENTRE TODOS PODEMOS</p>
 			        </div>
 			      </div>
 			      <div class="carousel-item">
-			        <img src="img/arrojobasura.jpg" class="d-block w-100" alt="..." height="600">
+			        <img src="img/arrojobasura.jpg" class="d-block w-100" alt="...">
 			        <div class="carousel-caption d-none d-md-block">
 			          <h1>DENUNCIA</h1>
 			          <p>AYUDANOS A UN TANDIL MAS LIMPIO</p>
 			        </div>
 			      </div>
 			      <div class="carousel-item">
-			        <img src="img/medioambiente.jpg" class="d-block w-100" alt="..." height="600">
+			        <img src="img/medioambiente.jpg" class="d-block w-100" alt="..." >
 			         <div class="carousel-caption d-none d-md-block">
 			          <h1>CONSTRUYENDO JUNTOS</h1>
 			          <p>UN TANDIL VERDE Y SALUDABLE</p>
