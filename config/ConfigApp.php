@@ -7,7 +7,8 @@
       [
         '' => 'WebController#index',
         'index' => 'WebController#index',
-        'admin' => 'WebController#admin'
+        'admin' => 'WebController#admin',
+        'user' => 'WebController#index'
       ];
 	}
 ?>

@@ -55,6 +55,11 @@
 			</button>
 			<!--DIV DE NAVEGACION  -->
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav nav-items-center ml-auto mr-auto">
+					<li>
+						<button class="btn"><a href="user">Soy usuario</a></button>
+					</li>
+				</ul>
 			</div>
 		</nav>
 		<div class="row">
