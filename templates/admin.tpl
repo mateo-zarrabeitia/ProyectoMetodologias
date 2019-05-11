@@ -62,8 +62,8 @@
 				</ul>
 			</div>
 		</nav>
-		<div class="row">
-			<div class="col-9">9 COLUMNAS</div> <!-- 75% -->
+		<div class="row" style="height: 700px">
+			<div class="col-9" id="mp"></div> <!-- 75% -->
 			<div class="col-3">3 COLUMNAS</div> <!-- 25% -->
 		</div>
 	</div> <!-- first section wrapper -->
@@ -108,6 +108,6 @@
 	<script src="js/owl.carousel.js"></script>
 	<script src="js/wow.min.js"></script>
 	<script src="js/main.js"></script>
-	<script src="js/geolocalizacion.js"></script>
+	<script src="js/maps-points.js"></script>
 </body>
 </html>
