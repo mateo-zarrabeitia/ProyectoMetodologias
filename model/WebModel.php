@@ -9,5 +9,15 @@ class WebModel extends Model{
     return $sentencia->fetchAll(PDO::FETCH_ASSOC);
   }
 
+  public function getReporte($id_reporte)
+  {
+    $sentencia = $this->db->prepare('SELECT * 
+                                        FROM reporte r
+                                        INNER JOIN usuario u ON(r.fk_id_usuario = u.id_usuario)
+                                        WHERE r.id_reporte = ?');
+    $sentencia->execute(array($id_reporte));
+    return $sentencia->fetchAll(PDO::FETCH_ASSOC);
+  }
+
 }
 ?>

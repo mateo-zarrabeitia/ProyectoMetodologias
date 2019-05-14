@@ -8,7 +8,8 @@
         '' => 'WebController#index',
         'index' => 'WebController#index',
         'admin' => 'WebController#admin',
-        'user' => 'WebController#index'
+        'user' => 'WebController#index',
+        'detalleReporte' => 'WebController#detalleReporte'
       ];
 	}
 ?>

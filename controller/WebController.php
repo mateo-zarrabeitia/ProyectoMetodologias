@@ -8,7 +8,7 @@
 		function __construct()
 		{
 			$this->view = new WebView();
-      $this->model = new WebModel();
+			$this->model = new WebModel();
 		}
 
 		public function index()
@@ -20,6 +20,13 @@
 	  	public function admin()
 	  	{
 	  		$this->view->showAdminIndex();
-	  	}
+		}
+			
+		public function detalleReporte($params)
+		{
+			$id_reporte = $params[0];
+			$reporte = $this->model->getReporte($id_reporte);
+			$this->view->showReporte($reporte);
+		}
 	}
  ?>

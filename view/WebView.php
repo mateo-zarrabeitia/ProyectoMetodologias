@@ -12,5 +12,11 @@
 			$this->smarty->display('templates/admin.tpl');
 		}
 
+		function showReporte($reporte)
+		{
+			$this->smarty->assign('reporte',$reporte);
+			$this->smarty->display('templates/reporte.tpl');
+		}
+
 	}
  ?>
