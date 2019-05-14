@@ -75,16 +75,6 @@
 					<div class="column-1-3">
 						<h1>Trash</h1>
 					</div>
-					<div class="column-2-3">
-						<!-- NAVEGACION EN EL FOOTER  -->
-						<nav class="footer-nav">
-						<ul>
-							<a href="#" ><li>Reportar Basura</li></a>
-							<a href="#" data-toggle="modal" data-target="#modalDenunciaForm"><li>Denunciar</li></a>
-							<a href="#" ><li>Mis Reportes</li></a>
-						</ul>
-					</nav>
-					</div>
 					<div class="column-3-3">
 						<div class="social-icons-footer">
 							<a href=""><i class="fab fa-facebook-f"></i></a>
