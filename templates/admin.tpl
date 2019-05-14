@@ -64,7 +64,7 @@
 		</nav>
 		<div class="row" style="height: 700px">
 			<div class="col-9" id="mp"></div> <!-- 75% -->
-			<div class="col-3">3 COLUMNAS</div> <!-- 25% -->
+			<div class="col-3 detallereporte">3 COLUMNAS</div> <!-- 25% -->
 		</div>
 	</div> <!-- first section wrapper -->
 

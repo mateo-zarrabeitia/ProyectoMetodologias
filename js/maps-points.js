@@ -48,9 +48,17 @@ $(document).ready(function() {
       // CREO EL EVENTO AL HACER UN CLICK EN EL MARCADOR PARA QUE LLAME A LA FUNCION "eventClick"
       google.maps.event.addListener(marker, 'click', eventClick)
     }
-    // CREO LA FUNCION LLAMADA AL HACER CLICK EN UN MARCADOR
+    // CREO LA FUNCION LLAMADA AL HACER CLICK EN UN MARCADOR PARA OBTENER UN DETALLE EN PARTICULAR
+    // Y MOSTRARLO EN EL SITIO A UN LADO DEL MAPA.
     function eventClick() {
-      alert("ID: " + this.id);
+      $.ajax({
+        "url" : "detalleReporte/"+this.id,
+        "method" : "GET",
+        "dataType" : "HTML",
+        "success" : function(data) {
+          $(".detallereporte").html(data);
+        }
+      });
     }
 
   }
