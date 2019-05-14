@@ -16,7 +16,7 @@ class WebModel extends Model{
                                         INNER JOIN usuario u ON(r.fk_id_usuario = u.id_usuario)
                                         WHERE r.id_reporte = ?');
     $sentencia->execute(array($id_reporte));
-    return $sentencia->fetchAll(PDO::FETCH_ASSOC);
+    return $sentencia->fetchAll(PDO::FETCH_ASSOC); 
   }
 
 }
