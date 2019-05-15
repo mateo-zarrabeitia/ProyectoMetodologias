@@ -151,7 +151,7 @@
 
 								 <i class="fas fa-map-marker-alt prefix grey-text"></i>
 								 <label data-error="wrong" data-success="right" for="form29">Direccion</label>
-								  <input type="text" id="form29" class="form-control validate" required>
+								  <input type="text" id="form29" class="form-control validate" maxlength="50" required>
 								 </div>
 
 							<hr align="center" size="100" width="87%" margin-left="80%" />
@@ -160,8 +160,8 @@
 					 	  </div>
 					 	  <div class="modal-body mx-3">
 						 	  	 <i class="fas fa-car prefix grey-text"></i>
-								<label data-error="wrong" data-success="right" for="form34" maxlength="7" required>Patente del Vehiculo</label>
-							 	<input type="text" id="form34" class="form-control validate" required>
+								<label data-error="wrong" data-success="right" for="form34"  required>Patente del Vehiculo</label>
+							 	<input type="text" id="form34" class="form-control validate" maxlength="7" required>
 
 								 <i class="fas fa-calendar-alt prefix grey-text"></i>
 								<label data-error="wrong" data-success="right" for="form34">Fecha</label>
