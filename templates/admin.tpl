@@ -63,8 +63,10 @@
 			</div>
 		</nav>
 		<div class="row" style="height: 700px">
+			<!-- MAPA CON COORDENADAS DE BASURA-->
 			<div class="col-9" id="mp"></div> <!-- 75% -->
-			<div class="col-3 detallereporte">3 COLUMNAS</div> <!-- 25% -->
+			<!-- INFORMACION DE LA DENUNCIA-->
+			<div class="col-3 detallereporte"></div> <!-- 25% -->
 		</div>
 	</div> <!-- first section wrapper -->
 

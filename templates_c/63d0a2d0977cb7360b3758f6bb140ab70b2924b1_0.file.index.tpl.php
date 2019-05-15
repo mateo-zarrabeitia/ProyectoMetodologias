@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2019-05-08 22:47:40
+/* Smarty version 3.1.30, created on 2019-05-15 02:45:21
   from "C:\xampp\htdocs\Scrum-03-Tudai-2019\templates\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5cd3406c2500c0_69696629',
+  'unifunc' => 'content_5cdb6121656a48_75151025',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '63d0a2d0977cb7360b3758f6bb140ab70b2924b1' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Scrum-03-Tudai-2019\\templates\\index.tpl',
-      1 => 1557348409,
+      1 => 1557881057,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cd3406c2500c0_69696629 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cdb6121656a48_75151025 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -100,7 +100,7 @@ function content_5cd3406c2500c0_69696629 (Smarty_Internal_Template $_smarty_tpl)
 		</nav>
 
 		<!-- ==========================================================================================================
-																   IFRAME GOOGLE MAPS
+																   PUBLICIDAD
 					 ========================================================================================================== -->
 				<div class="bd-example">
 			  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
