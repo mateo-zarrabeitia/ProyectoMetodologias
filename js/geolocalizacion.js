@@ -4,6 +4,41 @@ $(document).ready(function() {
   $(".denuncia").on("click", function (event) {
     Geolocalizar();
     document.getElementById("formDenuncia").reset();
+    $('#formDenuncia').on('submit', function (event) {
+      event.preventDefault();
+      $("#archivo").upload('guardarVideo',
+      {
+        nombre_archivo: $("#nombre_archivo").val()
+      },
+      function(respuesta) {
+        $(".dirVideo").val(respuesta);
+        ///
+        var formData = new FormData(document.getElementById("formDenuncia"));
+        formData.append("dato", "valor");
+        console.log(formData);
+        $.ajax({
+          url: "guardarDenuncia",
+          type: "post",
+          dataType: "html",
+          data: formData,
+          cache: false,
+          contentType: false,
+          processData: false
+        })
+        .done(function(res){
+          if (res == 1) {
+            $("#modalDenunciaForm").modal("hide");
+            $("#modalMensaje").modal();
+          } else {
+            // FALTA MENSAJE DE ERROR
+          }
+        });
+        $("#barra_de_progreso").attr('style', "width: 0%");
+      }, function(progreso, valor) {
+        $("#barra_de_progreso").attr('style', "width:"+valor+"%");
+      });
+
+    });
   });
 
   let map, infoWindow , marker;

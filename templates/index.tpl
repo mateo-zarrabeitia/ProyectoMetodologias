@@ -216,6 +216,9 @@
 							 <i class="fas fa-pencil prefix grey-text"></i>
 							 <label data-error="wrong" data-success="right" for="form8">Su denuncia ha sido enviada exitosamente. Gracias por colaborar!</label>
 						 </div>
+						 <div class="modal-footer d-flex justify-content-center">
+						<button class="btn btn-unique2" data-dismiss="modal">Aceptar<i class="fas fa-paper-plane-o ml-1"></i></button>
+					</div>
 					 </div>
 				 </div>
 			 </div>
@@ -293,5 +296,6 @@
 	<script src="js/wow.min.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/geolocalizacion.js"></script>
+	<script src="js/upload.js"></script>
 </body>
 </html>
