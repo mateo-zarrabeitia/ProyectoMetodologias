@@ -3,6 +3,7 @@ $(document).ready(function() {
   //CREO EL EVENTO AL PULSAR EL BOTON CON LA CLASE DENUNCIA QUE LLAME A LA FUNCION GEOLOCALIZAR
   $(".denuncia").on("click", function (event) {
     Geolocalizar();
+    document.getElementById("formDenuncia").reset();
   });
 
   let map, infoWindow , marker;
