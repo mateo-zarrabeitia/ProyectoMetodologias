@@ -57,6 +57,16 @@ $(document).ready(function() {
           lat: position.coords.latitude,
           lng: position.coords.longitude
         };
+        let settings = {
+          "async": true,
+          "crossDomain": true,
+          "url": "https://us1.locationiq.com/v1/reverse.php?key=9bc950c6f7cc34&lat="+position.coords.latitude+"&lon="+position.coords.longitude+"&format=json",
+          "method": "GET"
+        }
+
+        $.ajax(settings).done(function (response) {
+          $("#dirDenuncia").val(response.address.road+" "+response.address.house_number);
+        });
         //GUARDO EN LOS INPUT DEL FORM LA LAT Y LNG
         document.getElementById("inputLat").value = pos.lat;
         document.getElementById("inputLng").value = pos.lng;
