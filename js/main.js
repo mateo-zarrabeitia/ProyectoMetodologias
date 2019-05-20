@@ -13,4 +13,18 @@ $(document).ready(function() {
     $(this).closest(".modal").modal('hide');
   });
 
+	$("#borrarForm").click(function(){
+			document.getElementById("formDenuncia").reset();
+	});
+
+	$("#cerrarForm").click(function(){
+		$("#modalDenunciaForm").modal('hide');
+		$("#modalCancelar").modal();
+	});
+
+	$("#mostrarForm").click(function(){
+		$("#modalCancelar").modal('hide');
+		$("#modalDenunciaForm").modal('show');
+	});
+
 });
