@@ -122,8 +122,7 @@
 
 
 
-
-			 <div class="modal fade" id="modalDenunciaForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+<div class="modal fade" id="modalDenunciaForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
 			 aria-hidden="true">
 			 <div class="modal-dialog" role="document">
 				 <div class="modal-content">
@@ -148,6 +147,10 @@
 								 <label data-error="wrong" data-success="right" for="form34">Apellido</label>
 							 	<input type="text" id="form34" class="form-control validate" maxlength="30" required>
 
+							 	<i class="fas fa-user prefix grey-text"></i>
+								 <label data-error="wrong" data-success="right" for="form29">DNI</label>
+								  <input type="text" id="form29" class="form-control validate" maxlength="8" required>
+								 
 
 								 <i class="fas fa-map-marker-alt prefix grey-text"></i>
 								 <label data-error="wrong" data-success="right" for="form29">Direccion</label>
@@ -164,18 +167,16 @@
 							 	<input type="text" id="form34" class="form-control validate" maxlength="7" required>
 
 								 <i class="fas fa-calendar-alt prefix grey-text"></i>
-								<label data-error="wrong" data-success="right" for="form34">Fecha</label>
-							 	<input type="date" id="form34" class="form-control validate" required>
+							<label data-error="wrong" data-success="right" for="form34">Fecha y Hora</label>
+							<input type="datetime-local" id="form34" class="form-control fecha validate" name="fecha" value="" required>
 
-
-								 <i class="fas fa-clock prefix grey-text"></i>
-								 <label data-error="wrong" data-success="right" for="form34">Hora</label>
-							 	<input type="time" id="form34" class="form-control validate" required>
-
+								 
 								<!-- DIV PARA EL IFRAME DE GEOLOCALIZACION  DE GOOGLE -->
 								<div id="mapa"  style="width: 100%; height: 200px; margin-top: 10px"></div>
 								<input type="hidden" class="inputLat" id="inputLat" name="latitud" value="" required>
 								<input type="hidden" class="inputLng" id="inputLng" name="longitud" value="" required>
+								<input type="hidden" class="direccionDenuncia" id="dirDenuncia" name="dirDenuncia" value="" required>
+								<input type="hidden" class="dirVideo" id="dirVideo" name="dirVideo" value="" required>
 
 								<div class="labelvideo">
 									<i class="fas fa-arrow-circle-up prefix grey-text"></i>
@@ -190,7 +191,6 @@
 				 </div>
 			 </div>
 		 </div>
-
 
 		<!-- ==========================================================================================================
 							 															POP UP (MENSAJE DENUNCIA GENERADA)
