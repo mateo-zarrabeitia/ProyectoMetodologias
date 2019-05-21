@@ -32,8 +32,8 @@ $(document).ready(function() {
           } else {
             // FALTA MENSAJE DE ERROR
           }
+          $("#barra_de_progreso").attr('style', "width: 0%");
         });
-        $("#barra_de_progreso").attr('style', "width: 0%");
       }, function(progreso, valor) {
         $("#barra_de_progreso").attr('style', "width:"+valor+"%");
       });
