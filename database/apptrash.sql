@@ -1,4 +1,4 @@
-﻿-- Created by Vertabelo (http://vertabelo.com)
+-- Created by Vertabelo (http://vertabelo.com)
 -- Last modification date: 2019-05-06 13:14:18.238
 
 -- tables
@@ -11,8 +11,8 @@ CREATE TABLE Reporte (
     detalle varchar(255)  NULL,
     rutaImagen varchar(255)  NULL,
     rutaVideo varchar(255)  NULL,
-    fechaCreacion datetime  NOT NULL,
-    fechaFinalizada datetime  NULL,
+    fechaCreacion date  NOT NULL,
+    fechaFinalizada date  NULL,
     patente int  NULL,
     fk_id_usuario int  NOT NULL,
     CONSTRAINT reporte_pk PRIMARY KEY (id_reporte)
