@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2019-06-15 15:45:24
+/* Smarty version 3.1.30, created on 2019-06-15 16:53:51
   from "C:\xampp\htdocs\Scrum-03-Tudai-2019\templates\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5d04f6742fcee9_57842253',
+  'unifunc' => 'content_5d05067f102f08_06123253',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '63d0a2d0977cb7360b3758f6bb140ab70b2924b1' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Scrum-03-Tudai-2019\\templates\\index.tpl',
-      1 => 1560606321,
+      1 => 1560610376,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d04f6742fcee9_57842253 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d05067f102f08_06123253 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -84,7 +84,7 @@ function content_5d04f6742fcee9_57842253 (Smarty_Internal_Template $_smarty_tpl)
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav nav-items-center ml-auto mr-auto">
 						<li class="nav-item">
-							<a class="nav-link" href="#"  data-toggle="modal" data-target="#modalReporteForm">Reportar Basura </a>
+							<a class="nav-link reporte" href="#"  data-toggle="modal" data-target="#modalReporteForm">Reportar Basura </a>
 						</li>
 						<li class="nav-item active">
 							<a class="nav-link denuncia" href="#" data-toggle="modal" data-target="#modalDenunciaForm">Denunciar</a>
@@ -149,23 +149,50 @@ function content_5d04f6742fcee9_57842253 (Smarty_Internal_Template $_smarty_tpl)
 
 
 
-			<div class="modal fade" id="modalReporteForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header text-center">
-						<h4 class="modal-title w-100 font-weight-bold">Reporte</h4>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-				
-				
-					</div>
 
+				<div class="modal fade" id="modalReporteForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header text-center">
+							<h4 class="modal-title w-100 font-weight-bold">Reporte</h4>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body mx-3 ">
+							<p class="lead">Datos de la Denuncia</p>
+						</div>
+						<form id="formReporte" action="guardarReporte" method="post" class="form-signin" enctype="multipart/form-data">
+							<div class="modal-body mx-3">
+								<!--ubicacion del hecho-->
+								<!-- DIV PARA EL IFRAME DE GEOLOCALIZACION  DE GOOGLE -->
+								<div id="mapaReporte"  style="width: 100%; height: 200px; margin-top: 10px"></div>
+								<input type="hidden" class="inputLat" id="inputLat" name="latitud" value="" required>
+								<input type="hidden" class="inputLng" id="inputLng" name="longitud" value="" required>
+								<input type="hidden" class="direccionDenuncia" id="dirDenuncia" name="dirDenuncia" value="" required>
+
+								<!--Descripcion-->
+								<i class="fas fa-user prefix grey-text"></i>
+								<label data-error="wrong" data-success="right" for="form34">Descripcion</label>
+								<input type="text" id="form34" class="form-control validate" name="nombre" placeholder="Opcional" value="" maxlength="30" required>
+
+								<!--foto del lugar-->
+								<div class="label">
+									<i class="fas fa-arrow-circle-up prefix grey-text"></i>
+									<label data-error="wrong" data-success="right" for="upvideo">Subir Foto</label>
+								</div>
+								<input type="file" accept="image/*" id="archivo" class="form-control upvideo" name="imagen" required>
+								<div class="modal-footer d-flex justify-content-center">
+								<input  class="btn btn-unique" id="cerrarForm" type="button" name="Cancelar" value="Cancelar">
+								<input   class="btn btn-unique" id="formEnviar" type="submit"  name="Enviar" value="Enviar">
+							</div>
+							</form>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
+
 
 
 			<!-- ==========================================================================================================
@@ -224,7 +251,7 @@ function content_5d04f6742fcee9_57842253 (Smarty_Internal_Template $_smarty_tpl)
 
 
 							<!-- DIV PARA EL IFRAME DE GEOLOCALIZACION  DE GOOGLE -->
-							<div id="mapa"  style="width: 100%; height: 200px; margin-top: 10px"></div>
+							<div id="mapaDenuncia"  style="width: 100%; height: 200px; margin-top: 10px"></div>
 							<input type="hidden" class="inputLat" id="inputLat" name="latitud" value="" required>
 							<input type="hidden" class="inputLng" id="inputLng" name="longitud" value="" required>
 							<input type="hidden" class="direccionDenuncia" id="dirDenuncia" name="dirDenuncia" value="" required>
@@ -272,6 +299,10 @@ function content_5d04f6742fcee9_57842253 (Smarty_Internal_Template $_smarty_tpl)
 						<button class="btn btn-unique2" data-dismiss="modal">Aceptar<i class="fas fa-paper-plane-o ml-1"></i></button>
 					</div>
 				</div>
+			</div>
+			<div class="modal-footer d-flex justify-content-center">
+				<input  class="btn btn-unique" id="cerrarForm" type="button" name="Cancelar" value="Cancelar">
+				<input   class="btn btn-unique" id="formEnviar" type="submit"  name="Enviar" value="Enviar">
 			</div>
 		</div>
 	</div>

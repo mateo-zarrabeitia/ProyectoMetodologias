@@ -156,6 +156,10 @@
 									<label data-error="wrong" data-success="right" for="upvideo">Subir Foto</label>
 								</div>
 								<input type="file" accept="image/*" id="archivo" class="form-control upvideo" name="imagen" required>
+								<div class="modal-footer d-flex justify-content-center">
+								<input  class="btn btn-unique" id="cerrarForm" type="button" name="Cancelar" value="Cancelar">
+								<input   class="btn btn-unique" id="formEnviar" type="submit"  name="Enviar" value="Enviar">
+							</div>
 							</form>
 						</div>
 					</div>
