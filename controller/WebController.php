@@ -65,7 +65,7 @@
         $rutaFoto = $_POST['imagen'];
     
         if($latitud != null && $longitud != null && $dirDenuncia != null && $rutaFoto != null){
-            $this->model->guardarReporte($latitud, $longitud, $dirDenuncia, $rutaFoto, $descripcion);
+		   return $this->model->guardarReporte($latitud, $longitud, $dirDenuncia, $rutaFoto, $descripcion);
         }else{
             header('Location .'.INDEX);
         }
