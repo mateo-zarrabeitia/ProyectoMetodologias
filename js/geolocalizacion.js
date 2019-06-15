@@ -2,20 +2,19 @@ $(document).ready(function() {
   "use strict"
   //CREO EL EVENTO AL PULSAR EL BOTON CON LA CLASE DENUNCIA QUE LLAME A LA FUNCION GEOLOCALIZAR
   $(".denuncia").on("click", function (event) {
-    Geolocalizar('mapaDenuncia');
+    Geolocalizar('Denuncia');
     document.getElementById("formDenuncia").reset();
     $('#formDenuncia').on('submit', function (event) {
       event.preventDefault();
-      $("#archivo").upload('guardarVideo',
+      $("#video").upload('guardarArchivo',
       {
-        nombre_archivo: $("#nombre_archivo").val()
+        nombre_archivo: $("#nombre_imangen").val()
       },
       function(respuesta) {
         $(".dirVideo").val(respuesta);
         ///
         var formData = new FormData(document.getElementById("formDenuncia"));
         formData.append("dato", "valor");
-        console.log(formData);
         $.ajax({
           url: "guardarDenuncia",
           type: "post",
@@ -42,15 +41,48 @@ $(document).ready(function() {
   });
 
   $(".reporte").on("click", function (event) {
-    Geolocalizar('mapaReporte');
+    Geolocalizar('Reporte');
     document.getElementById("formReporte").reset();
+    $('#formReporte').on('submit', function (event) {
+      event.preventDefault();
+      $("#imagen").upload('guardarArchivo',
+      {
+        nombre_archivo: $("#nombre_archivo").val()
+      },
+      function(respuesta) {
+        $("#dirFoto").val(respuesta);
+        //
+        var formData = new FormData(document.getElementById("formReporte"));
+        formData.append("dato", "valor");
+        $.ajax({
+          url: "guardarReporte",
+          type: "post",
+          dataType: "html",
+          data: formData,
+          cache: false,
+          contentType: false,
+          processData: false
+        })
+        .done(function(res){
+          console.log(res);
+          if (res) {
+            $("#modalReporteForm").modal("hide");
+            $("#idReporte").html('<label data-error="wrong" data-success="right" for="form8"><p>Su numero de reporte es:'+res+'</p></label>');
+            $("#modalMensaje").modal();
+          } else {
+            // FALTA MENSAJE DE ERROR
+          }
+        });
+      }, function(progreso, valor) {
+      });
 
+    });
   });
 
   let map, infoWindow , marker;
   // DEFINO LA FUNCION GEOLOCALIZAR QUE CONSUME DE LA API DE GOOGLE MAPS PARA OBTENER LAS COORDENADAS Y CREAR EL POINT EN EL MAPA
-  function Geolocalizar(idMapa) {
-    map = new google.maps.Map(document.getElementById(idMapa), {
+  function Geolocalizar(id) {
+    map = new google.maps.Map(document.getElementById("mapa"+id), {
       center: {lat: -34.397, lng: 150.644},
       zoom: 15
     });
@@ -71,11 +103,11 @@ $(document).ready(function() {
         }
 
         $.ajax(settings).done(function (response) {
-          $("#dirDenuncia").val(response.address.road+" "+response.address.house_number);
+          $("#dir"+id).val(response.address.road+" "+response.address.house_number);
         });
         //GUARDO EN LOS INPUT DEL FORM LA LAT Y LNG
-        document.getElementById("inputLat").value = pos.lat;
-        document.getElementById("inputLng").value = pos.lng;
+        document.getElementById("inputLat"+id).value = pos.lat;
+        document.getElementById("inputLng"+id).value = pos.lng;
         infoWindow.setPosition(pos);
         infoWindow.setContent('Estoy Aqui');
         infoWindow.open(map);

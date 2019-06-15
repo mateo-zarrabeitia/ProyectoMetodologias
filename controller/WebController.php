@@ -29,19 +29,19 @@
 			$this->view->showReporte($reporte);
 		}
 
-		public function guardarVideo(){
-		if (isset($_FILES['archivo'])) {
-			$archivo = $_FILES['archivo'];
-			$extension = pathinfo($archivo['name'], PATHINFO_EXTENSION);
-			$time = time();
-			$nombre = "{$_POST['nombre_archivo']}_$time.$extension";
-			if (move_uploaded_file($archivo['tmp_name'], "img/reportes/$nombre")) {
-				echo "img/reportes/$nombre";
-			} else {
-				echo 0;
+		public function guardarArchivo(){
+			if (isset($_FILES['archivo'])) {
+				$archivo = $_FILES['archivo'];
+				$extension = pathinfo($archivo['name'], PATHINFO_EXTENSION);
+				$time = time();
+				$nombre = "{$archivo['name']}_$time.$extension";
+				if (move_uploaded_file($archivo['tmp_name'], "img/reportes/$nombre")) {
+					echo "img/reportes/$nombre";
+				} else {
+					echo 0;
+				}
 			}
 		}
-	}
 
 	public function guardarDenuncia(){
 		$nombre = $_POST['nombre'];
@@ -63,7 +63,7 @@
 		$dirDenuncia = $_POST['dirDenuncia'];
         $descripcion = $_POST['descripcion'];
         $rutaFoto = $_POST['imagen'];
-    
+
         if($latitud != null && $longitud != null && $dirDenuncia != null && $rutaFoto != null){
 		   return $this->model->guardarReporte($latitud, $longitud, $dirDenuncia, $rutaFoto, $descripcion);
         }else{

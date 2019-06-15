@@ -141,21 +141,22 @@
 								<!--ubicacion del hecho-->
 								<!-- DIV PARA EL IFRAME DE GEOLOCALIZACION  DE GOOGLE -->
 								<div id="mapaReporte"  style="width: 100%; height: 200px; margin-top: 10px"></div>
-								<input type="hidden" class="inputLat" id="inputLat" name="latitud" value="" required>
-								<input type="hidden" class="inputLng" id="inputLng" name="longitud" value="" required>
-								<input type="hidden" class="direccionDenuncia" id="dirDenuncia" name="dirDenuncia" value="" required>
+								<input type="hidden" class="inputLat" id="inputLatReporte" name="latitud" value="" required>
+								<input type="hidden" class="inputLng" id="inputLngReporte" name="longitud" value="" required>
+								<input type="hidden" class="direccionReporte" id="dirReporte" name="dirDenuncia" value="" required>
+								<input type="hidden" class="dirFoto" id="dirFoto" name="imagen" value="" required>
 
 								<!--Descripcion-->
 								<i class="fas fa-user prefix grey-text"></i>
 								<label data-error="wrong" data-success="right" for="form34">Descripcion</label>
-								<input type="text" id="form34" class="form-control validate" name="nombre" placeholder="Opcional" value="" maxlength="30" required>
+								<input type="text" id="form34" class="form-control validate" name="descripcion" placeholder="Opcional" value="" maxlength="30">
 
 								<!--foto del lugar-->
 								<div class="label">
 									<i class="fas fa-arrow-circle-up prefix grey-text"></i>
 									<label data-error="wrong" data-success="right" for="upvideo">Subir Foto</label>
 								</div>
-								<input type="file" accept="image/*" id="archivo" class="form-control upvideo" name="imagen" required>
+								<input type="file" accept="image/*" id="imagen" class="form-control upvideo" name="archivo" required>
 								<div class="modal-footer d-flex justify-content-center">
 								<input  class="btn btn-unique" id="cerrarForm" type="button" name="Cancelar" value="Cancelar">
 								<input   class="btn btn-unique" id="formEnviar" type="submit"  name="Enviar" value="Enviar">
@@ -225,8 +226,8 @@
 
 							<!-- DIV PARA EL IFRAME DE GEOLOCALIZACION  DE GOOGLE -->
 							<div id="mapaDenuncia"  style="width: 100%; height: 200px; margin-top: 10px"></div>
-							<input type="hidden" class="inputLat" id="inputLat" name="latitud" value="" required>
-							<input type="hidden" class="inputLng" id="inputLng" name="longitud" value="" required>
+							<input type="hidden" class="inputLat" id="inputLatDenuncia" name="latitud" value="" required>
+							<input type="hidden" class="inputLng" id="inputLngDenuncia" name="longitud" value="" required>
 							<input type="hidden" class="direccionDenuncia" id="dirDenuncia" name="dirDenuncia" value="" required>
 							<input type="hidden" class="dirVideo" id="dirVideo" name="dirVideo" value="" required>
 
@@ -234,7 +235,7 @@
 								<i class="fas fa-arrow-circle-up prefix grey-text"></i>
 								<label data-error="wrong" data-success="right" for="upvideo">Subir video</label>
 							</div>
-							<input type="file" accept="video/*" id="archivo" class="form-control upvideo" name="archivo" required>
+							<input type="file" accept="video/*" id="video" class="form-control upvideo" name="archivo" required>
 							<div class="progress"  style="margin-top: 10px">
 								<div class="progress-bar progress-bar-striped progress-bar-animated" id="barra_de_progreso" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style=""></div>
 							</div>
@@ -267,15 +268,13 @@
 					<div class="md-form">
 						<i class="fas fa-pencil prefix grey-text"></i>
 						<label data-error="wrong" data-success="right" for="form8">Su denuncia ha sido enviada exitosamente. Gracias por colaborar!</label>
+						<div class="" id="idReporte">
+						</div>
 					</div>
 					<div class="modal-footer d-flex justify-content-center">
 						<button class="btn btn-unique2" data-dismiss="modal">Aceptar<i class="fas fa-paper-plane-o ml-1"></i></button>
 					</div>
 				</div>
-			</div>
-			<div class="modal-footer d-flex justify-content-center">
-				<input  class="btn btn-unique" id="cerrarForm" type="button" name="Cancelar" value="Cancelar">
-				<input   class="btn btn-unique" id="formEnviar" type="submit"  name="Enviar" value="Enviar">
 			</div>
 		</div>
 	</div>

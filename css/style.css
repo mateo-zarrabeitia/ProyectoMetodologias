@@ -20,6 +20,19 @@ body{
   background-position: center;
 
 }
+.carousel-inner img {
+    width: 100%;
+    max-height: 700px;
+}
+
+.carousel {
+  height: auto;
+  margin-bottom: 0; /* ¿por qué, carousel, por qué? */
+}
+
+.carousel-inner{
+ height: 100%;
+}
 
  /* ==========================================================================================================
                     STYLE VER REPORTE
@@ -72,11 +85,11 @@ p{
   bottom:-.5rem;
   left:-.5rem;
   right:-.5rem;
-  border:.25rem solid #D5D4D4  
+  border:.25rem solid #D5D4D4
 }
 
 /* ==========================================================================================================
-                   
+
    ========================================================================================================== */
 
 .download-btn-first {
