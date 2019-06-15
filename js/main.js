@@ -17,14 +17,28 @@ $(document).ready(function() {
 			document.getElementById("formDenuncia").reset();
 	});
 
-	$("#cerrarForm").click(function(){
+	$("#cerrarDenuncia").click(function(){
 		$("#modalDenunciaForm").modal('hide');
+		$("#mostrarDenuncia").show();
+		$("#mostrarReporte").hide();
 		$("#modalCancelar").modal();
 	});
 
-	$("#mostrarForm").click(function(){
+	$("#cerrarReporte").click(function(){
+		$("#modalReporteForm").modal('hide');
+		$("#mostrarDenuncia").hide();
+		$("#mostrarReporte").show();
+		$("#modalCancelar").modal();
+	});
+
+	$("#mostrarDenuncia").click(function(){
 		$("#modalCancelar").modal('hide');
 		$("#modalDenunciaForm").modal('show');
+	});
+
+	$("#mostrarReporte").click(function(){
+		$("#modalCancelar").modal('hide');
+		$("#modalReporteForm").modal('show');
 	});
 
 });

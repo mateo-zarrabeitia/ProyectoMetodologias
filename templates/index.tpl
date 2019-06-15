@@ -158,7 +158,7 @@
 								</div>
 								<input type="file" accept="image/*" id="imagen" class="form-control upvideo" name="archivo" required>
 								<div class="modal-footer d-flex justify-content-center">
-								<input  class="btn btn-unique" id="cerrarForm" type="button" name="Cancelar" value="Cancelar">
+								<input  class="btn btn-unique" id="cerrarReporte" type="button" name="Cancelar" value="Cancelar">
 								<input   class="btn btn-unique" id="formEnviar" type="submit"  name="Enviar" value="Enviar">
 							</div>
 							</form>
@@ -240,7 +240,7 @@
 								<div class="progress-bar progress-bar-striped progress-bar-animated" id="barra_de_progreso" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style=""></div>
 							</div>
 							<div class="modal-footer d-flex justify-content-center">
-								<input  class="btn btn-unique" id="cerrarForm" type="button" name="Cancelar" value="Cancelar">
+								<input  class="btn btn-unique" id="cerrarDenuncia" type="button" name="Cancelar" value="Cancelar">
 								<input   class="btn btn-unique" id="formEnviar" type="submit"  name="Enviar" value="Enviar">
 							</div>
 						</form>
@@ -299,8 +299,9 @@
 					<label data-error="wrong" data-success="right" for="form8">Si confirma la cancelacion los datos ingresados en el formulario se perderan.</label>
 				</div>
 			</div>
-			<div class="modal-footer d-flex justify-content-center">
-				<button class="btn btn-unique" id="mostrarForm">Cancelar</button>
+			<div class="modal-footer d-flex justify-content-center" id="cancelarForm">
+				<button class="btn btn-unique" id="mostrarDenuncia">Cancelar</button>
+				<button class="btn btn-unique" id="mostrarReporte">Cancelar</button>
 				<button class="btn btn-unique2" id="borrarForm" data-dismiss="modal">Confirmar<i class="fas fa-paper-plane-o ml-1"></i></button>
 			</div>
 		</div>
