@@ -37,5 +37,13 @@ class WebModel extends Model{
       $resultado =  $sentencia->execute([$latitud,$longitud,$direccionDenuncia,$ruta,$fecha,$patente,$id_usuario]);
       return $sentencia->rowCount();
   }
+
+  function guardarReporte($latitud, $longitud, $direcciondelHecho, $rutaFoto, $descripcion) 
+  {
+    $sentencia = $this->db->prepare('INSERT INTO `reporte` (`latitud`, `longitud`, `direcciondelHecho`, `rutaFoto`, `descripciondelHecho`, `fk_id_usuario`) VALUES (?, ?, ?, ?, ?, 1)');
+    $resultado =  $sentencia->execute([$latitud, $longitud, $direcciondelHecho, $rutaFoto, $descripcion, $id_usuario]);
+    return $sentencia->rowCount();
+  }
+
     }
     ?>

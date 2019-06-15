@@ -62,10 +62,10 @@
 		$longitud = $_POST['longitud'];
 		$dirDenuncia = $_POST['dirDenuncia'];
         $descripcion = $_POST['descripcion'];
-        $imagen = $_POST['imagen'];
+        $rutaFoto = $_POST['imagen'];
     
-        if($latitud != null && $longitud != null && $dirDenuncia != null && $imagen != null){
-            $this->model->setReporte($latitud, $longitud, $dirDenuncia, $imagen, $descripcion);
+        if($latitud != null && $longitud != null && $dirDenuncia != null && $rutaFoto != null){
+            $this->model->guardarReporte($latitud, $longitud, $dirDenuncia, $rutaFoto, $descripcion);
         }else{
             header('Location .'.INDEX);
         }
