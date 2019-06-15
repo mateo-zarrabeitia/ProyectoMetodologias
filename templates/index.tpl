@@ -57,7 +57,7 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav nav-items-center ml-auto mr-auto">
 						<li class="nav-item">
-							<a class="nav-link" href="#">Reportar Basura </a>
+							<a class="nav-link" href="#"  data-toggle="modal" data-target="#modalReporteForm">Reportar Basura </a>
 						</li>
 						<li class="nav-item active">
 							<a class="nav-link denuncia" href="#" data-toggle="modal" data-target="#modalDenunciaForm">Denunciar</a>
@@ -115,6 +115,29 @@
 					</a>
 				</div>
 			</div>
+
+				<!-- ==========================================================================================================
+			FORM POP UP (GENERAR REPORTE)
+			========================================================================================================== -->
+
+
+
+			<div class="modal fade" id="modalReporteForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+			aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header text-center">
+						<h4 class="modal-title w-100 font-weight-bold">Reporte</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
 
 			<!-- ==========================================================================================================
 			FORM POP UP (GENERAR DENUNCIA)
