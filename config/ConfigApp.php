@@ -11,7 +11,8 @@
         'user' => 'WebController#index',
         'detalleReporte' => 'WebController#detalleReporte',
 				'guardarDenuncia' => 'WebController#guardarDenuncia',
-				'guardarVideo' => 'WebController#guardarVideo'
+        'guardarVideo' => 'WebController#guardarVideo',
+        'guardarReporte' => 'WebController#guardarReporte'
       ];
 	}
 ?>

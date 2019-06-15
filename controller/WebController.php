@@ -56,5 +56,19 @@
 		$direccionDenuncia= $_POST['dirDenuncia'];
 		return $this->model->guardarDenuncia($nombre,$apellido,$dni,$direccionUsuario,$patente,$fecha,$latitud,$longitud,$ruta,$direccionDenuncia);
 	}
+
+	public function guardarReporte(){
+		$latitud = $_POST['latitud'];
+		$longitud = $_POST['longitud'];
+		$dirDenuncia = $_POST['dirDenuncia'];
+        $descripcion = $_POST['descripcion'];
+        $imagen = $_POST['imagen'];
+    
+        if($latitud != null && $longitud != null && $dirDenuncia != null && $imagen != null){
+            $this->model->setReporte($latitud, $longitud, $dirDenuncia, $imagen, $descripcion);
+        }else{
+            header('Location .'.INDEX);
+        }
+	}
 	}
  ?>
