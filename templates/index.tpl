@@ -122,21 +122,46 @@
 
 
 
-			<div class="modal fade" id="modalReporteForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header text-center">
-						<h4 class="modal-title w-100 font-weight-bold">Reporte</h4>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					</div>
 
+				<div class="modal fade" id="modalReporteForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header text-center">
+							<h4 class="modal-title w-100 font-weight-bold">Reporte</h4>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body mx-3 ">
+							<p class="lead">Datos de la Denuncia</p>
+						</div>
+						<form id="formDenuncia" action="guardarDenuncia" method="post" class="form-signin" enctype="multipart/form-data">
+							<div class="modal-body mx-3">
+								<!--ubicacion del hecho-->
+								<!-- DIV PARA EL IFRAME DE GEOLOCALIZACION  DE GOOGLE -->
+								<div id="mapa"  style="width: 100%; height: 200px; margin-top: 10px"></div>
+								<input type="hidden" class="inputLat" id="inputLat" name="latitud" value="" required>
+								<input type="hidden" class="inputLng" id="inputLng" name="longitud" value="" required>
+								<input type="hidden" class="direccionDenuncia" id="dirDenuncia" name="dirDenuncia" value="" required>
+
+								<!--Descripcion-->
+								<i class="fas fa-user prefix grey-text"></i>
+								<label data-error="wrong" data-success="right" for="form34">Descripcion</label>
+								<input type="text" id="form34" class="form-control validate" name="nombre" placeholder="Opcional" value="" maxlength="30" required>
+
+								<!--foto del lugar-->
+								<div class="label">
+									<i class="fas fa-arrow-circle-up prefix grey-text"></i>
+									<label data-error="wrong" data-success="right" for="upvideo">Subir Foto</label>
+								</div>
+								<input type="file" accept="image/*" id="archivo" class="form-control upvideo" name="imagen" required>
+							</form>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
+
 
 
 			<!-- ==========================================================================================================
