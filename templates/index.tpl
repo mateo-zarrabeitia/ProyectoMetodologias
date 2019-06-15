@@ -57,7 +57,7 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav nav-items-center ml-auto mr-auto">
 						<li class="nav-item">
-							<a class="nav-link" href="#"  data-toggle="modal" data-target="#modalReporteForm">Reportar Basura </a>
+							<a class="nav-link reporte" href="#"  data-toggle="modal" data-target="#modalReporteForm">Reportar Basura </a>
 						</li>
 						<li class="nav-item active">
 							<a class="nav-link denuncia" href="#" data-toggle="modal" data-target="#modalDenunciaForm">Denunciar</a>
@@ -136,11 +136,11 @@
 						<div class="modal-body mx-3 ">
 							<p class="lead">Datos de la Denuncia</p>
 						</div>
-						<form id="formDenuncia" action="guardarDenuncia" method="post" class="form-signin" enctype="multipart/form-data">
+						<form id="formReporte" action="guardarReporte" method="post" class="form-signin" enctype="multipart/form-data">
 							<div class="modal-body mx-3">
 								<!--ubicacion del hecho-->
 								<!-- DIV PARA EL IFRAME DE GEOLOCALIZACION  DE GOOGLE -->
-								<div id="mapa"  style="width: 100%; height: 200px; margin-top: 10px"></div>
+								<div id="mapaReporte"  style="width: 100%; height: 200px; margin-top: 10px"></div>
 								<input type="hidden" class="inputLat" id="inputLat" name="latitud" value="" required>
 								<input type="hidden" class="inputLng" id="inputLng" name="longitud" value="" required>
 								<input type="hidden" class="direccionDenuncia" id="dirDenuncia" name="dirDenuncia" value="" required>
@@ -220,7 +220,7 @@
 
 
 							<!-- DIV PARA EL IFRAME DE GEOLOCALIZACION  DE GOOGLE -->
-							<div id="mapa"  style="width: 100%; height: 200px; margin-top: 10px"></div>
+							<div id="mapaDenuncia"  style="width: 100%; height: 200px; margin-top: 10px"></div>
 							<input type="hidden" class="inputLat" id="inputLat" name="latitud" value="" required>
 							<input type="hidden" class="inputLng" id="inputLng" name="longitud" value="" required>
 							<input type="hidden" class="direccionDenuncia" id="dirDenuncia" name="dirDenuncia" value="" required>
@@ -268,6 +268,10 @@
 						<button class="btn btn-unique2" data-dismiss="modal">Aceptar<i class="fas fa-paper-plane-o ml-1"></i></button>
 					</div>
 				</div>
+			</div>
+			<div class="modal-footer d-flex justify-content-center">
+				<input  class="btn btn-unique" id="cerrarForm" type="button" name="Cancelar" value="Cancelar">
+				<input   class="btn btn-unique" id="formEnviar" type="submit"  name="Enviar" value="Enviar">
 			</div>
 		</div>
 	</div>

@@ -2,7 +2,7 @@ $(document).ready(function() {
   "use strict"
   //CREO EL EVENTO AL PULSAR EL BOTON CON LA CLASE DENUNCIA QUE LLAME A LA FUNCION GEOLOCALIZAR
   $(".denuncia").on("click", function (event) {
-    Geolocalizar();
+    Geolocalizar('mapaDenuncia');
     document.getElementById("formDenuncia").reset();
     $('#formDenuncia').on('submit', function (event) {
       event.preventDefault();
@@ -41,10 +41,16 @@ $(document).ready(function() {
     });
   });
 
+  $(".reporte").on("click", function (event) {
+    Geolocalizar('mapaReporte');
+    document.getElementById("formReporte").reset();
+
+  });
+
   let map, infoWindow , marker;
   // DEFINO LA FUNCION GEOLOCALIZAR QUE CONSUME DE LA API DE GOOGLE MAPS PARA OBTENER LAS COORDENADAS Y CREAR EL POINT EN EL MAPA
-  function Geolocalizar() {
-    map = new google.maps.Map(document.getElementById('mapa'), {
+  function Geolocalizar(idMapa) {
+    map = new google.maps.Map(document.getElementById(idMapa), {
       center: {lat: -34.397, lng: 150.644},
       zoom: 15
     });
