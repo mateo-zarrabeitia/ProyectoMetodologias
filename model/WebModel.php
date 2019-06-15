@@ -42,7 +42,7 @@ class WebModel extends Model{
   {
     $sentencia = $this->db->prepare('INSERT INTO `reporte` (`latitud`, `longitud`, `direcciondelHecho`, `rutaFoto`, `descripciondelHecho`, `fk_id_usuario`) VALUES (?, ?, ?, ?, ?, 1)');
     $resultado =  $sentencia->execute([$latitud, $longitud, $direcciondelHecho, $rutaFoto, $descripcion, $id_usuario]);
-    return $sentencia->rowCount();
+    return $db->lastInsertId();
   }
 
     }
