@@ -38,10 +38,12 @@ class WebModel extends Model{
       return $sentencia->rowCount();
   }
 
-  function guardarReporte($latitud, $longitud, $direcciondelHecho, $rutaFoto, $descripcion) 
+  function guardarReporte($latitud, $longitud, $direcciondelHecho, $rutaFoto, $descripcion)
   {
-    $sentencia = $this->db->prepare('INSERT INTO `reporte` (`latitud`, `longitud`, `direcciondelHecho`, `rutaFoto`, `descripciondelHecho`, `fk_id_usuario`) VALUES (?, ?, ?, ?, ?, 1)');
-    $resultado =  $sentencia->execute([$latitud, $longitud, $direcciondelHecho, $rutaFoto, $descripcion, $id_usuario]);
+    $id_usuario = 1;
+    $fecha = date("y-m-d");
+    $sentencia = $this->db->prepare('INSERT INTO `reporte` (`latitud`, `longitud`, `direcciondelHecho`, `rutaImagen`, `detalle`, `fechaCreacion`,`fk_id_usuario`) VALUES (?, ?, ?, ?, ?, ?,?)');
+    $resultado =  $sentencia->execute([$latitud, $longitud, $direcciondelHecho, $rutaFoto, $descripcion, $fecha ,$id_usuario]);
     return $this->db->lastInsertId();
   }
 
